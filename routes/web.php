@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\CryptoNewsController;
 
 use App\Http\Controllers\PiluaController;
 
@@ -11,3 +12,4 @@ Route::get('/loan-vs-sip', fn() => view('loan-vs-sip'));
 Route::get('/crypto-tracker', fn() => view('crypto-tracker'));
 Route::get('/portfolio', fn() => view('portfolio'));
 Route::get('/what-if', fn() => view('what-if'));
+Route::get('/crypto-news', [CryptoNewsController::class, 'index']);
